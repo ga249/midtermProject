@@ -277,7 +277,9 @@ void rvWeaponGauntlet::Attack ( void ) {
 	} else {
 		impactEffect->SetOrigin ( tr.endpos );
 		impactEffect->SetAxis ( tr.c.normal.ToMat3() );
-	}
+	} 
+	
+	
 	
 	// Do damage?
 	if ( gameLocal.time > nextAttackTime ) {					
