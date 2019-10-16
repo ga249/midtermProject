@@ -501,6 +501,7 @@ stateResult_t rvWeaponGauntlet::State_Fire ( const stateParms_t& parms ) {
 			return SRESULT_WAIT;
 		
 		case STAGE_END:
+			nextAttackTime = gameLocal.time + fireRate;
 			PlayAnim ( ANIMCHANNEL_ALL, "attack_end", parms.blendFrames );
 			StopBlade ( );
 			StartSound( "snd_spin_down", SND_CHANNEL_WEAPON, 0, false, 0 );
