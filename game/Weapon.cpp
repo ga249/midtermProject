@@ -2814,7 +2814,7 @@ void rvWeapon::Hitscan( const idDict& dict, const idVec3& muzzleOrigin, const id
 #ifdef _XBOX
 			dir = muzzleAxis[ 0 ] + muzzleAxis[ 2 ] * ( ang * idMath::Sin( spin ) ) - muzzleAxis[ 1 ] * ( ang * idMath::Cos( spin ) );
 #else
-			dir = playerViewAxis[ 0 ] + playerViewAxis[ 2 ] * ( ang * idMath::Sin( spin ) ) - playerViewAxis[ 1 ] * ( ang * idMath::Cos( spin ) );
+			dir = playerViewAxis[ 0 ] + /*playerViewAxis[ 2 ] * ( ang * idMath::Sin( spin ) )*/  playerViewAxis[ 1 ] * ( ang * idMath::Cos( spin ) );
 #endif
 			//RAVEN END
 		}
